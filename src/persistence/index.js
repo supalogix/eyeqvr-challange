@@ -1,10 +1,11 @@
 const mockDb = {
   accounts: [],
   accountCreations: [],
-  authentications: [],
+  tokens: [],
   logouts: [],
   logins: [],
   errors: [],
+  passwords: [],
   passwordChanges: []
 };
 

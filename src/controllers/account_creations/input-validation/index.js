@@ -1,4 +1,4 @@
-import {v4} from "node-uuid";
+
 import validator from "validator";
 
 export const validateInput = (props) => ({
@@ -11,6 +11,24 @@ export const validateInput = (props) => ({
   }
 });
 
+/**
+ * @params {props} object
+ *
+ * @example <caption>accountId is missing</caption>
+ * const props = {}
+ * const result = accountIdIsMissing(props);
+ * expect(result).to.deep.equal([
+ *  name: "accountId",
+ *  reason: "accountId is missing"
+ * ]);
+ *
+ * @example <caption>accountId is not missing</caption>
+ * const props = {
+ *  accountId: "1234"
+ * };
+ * const result = accountIdIsMissing(props);
+ * expect(result).to.deep.equal([]);
+ */
 function accountIdIsMissing(props) {
   if (!props.accountId)
     return [{

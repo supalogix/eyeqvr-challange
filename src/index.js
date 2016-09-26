@@ -3,7 +3,8 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import {
   accountController,
-  accountCreationController
+  accountCreationController,
+  loginsController
 } from "./controllers";
 import db from "./persistence";
 
@@ -18,3 +19,6 @@ app.use(accountController(db));
 //app.use(errorController(db));
 //app.use(passwordChangeController(db));
 //app.use(profileChangeController(db));
+export {
+  loginsController as loginController
+}
