@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "feature_test": "./node_modules/.bin/babel-node ./node_modules/.bin/cucumber-js",
+    "feature_test": "./node_modules/.bin/babel-node ./node_modules/.bin/cucumber-js features",
     "unit_test": "mocha --compilers js:babel-register test/**/*.js",
     "build": "babel --out-dir=dist src --source-maps",
     "start": "node ./dist/index"
