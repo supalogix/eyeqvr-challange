@@ -28,5 +28,10 @@
   "dependencies": {
     "node-uuid": "^1.4.7",
     "validator": "^5.7.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   }
 }
